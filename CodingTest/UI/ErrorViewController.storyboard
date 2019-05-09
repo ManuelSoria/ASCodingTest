@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="MarkOT-Bold.ttf">
+            <string>MarkOT-Bold</string>
+        </array>
+        <array key="MarkOT-Book.ttf">
+            <string>MarkOT-Book</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Error View Controller-->
+        <scene sceneID="vFY-up-68Y">
+            <objects>
+                <viewController storyboardIdentifier="ErrorViewController" id="njd-se-YQW" customClass="ErrorViewController" customModule="CodingTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Z2X-ZH-RVh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KYk-ml-Ndb">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Some Error" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ctY-Ro-yp6">
+                                        <rect key="frame" x="20" y="314" width="335" height="19"/>
+                                        <fontDescription key="fontDescription" name="MarkOT-Book" family="Mark OT" pointSize="16"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rSw-cJ-zuV">
+                                        <rect key="frame" x="87.5" y="403" width="200" height="70"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="F0o-re-Vu1"/>
+                                            <constraint firstAttribute="height" constant="70" id="v27-9p-iNQ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MarkOT-Bold" family="Mark OT" pointSize="14"/>
+                                        <state key="normal" title="Reintentar">
+                                            <color key="titleColor" red="0.0" green="0.16862745100000001" blue="0.27058823529999998" alpha="1" colorSpace="deviceRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.0" green="0.16862745100000001" blue="0.27058823529999998" alpha="1" colorSpace="deviceRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isButtonTypeBlue" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="actionButtonDidTapped" destination="njd-se-YQW" eventType="touchUpInside" id="Jek-cv-bZg"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fail" translatesAutoresizingMaskIntoConstraints="NO" id="Jpe-fy-MBt">
+                                        <rect key="frame" x="137.5" y="204" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="UMs-K1-WLH"/>
+                                            <constraint firstAttribute="height" constant="100" id="Yb2-R6-Ke8"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="rSw-cJ-zuV" firstAttribute="top" secondItem="ctY-Ro-yp6" secondAttribute="bottom" constant="70" id="6hP-zk-xul"/>
+                                    <constraint firstItem="ctY-Ro-yp6" firstAttribute="top" secondItem="Jpe-fy-MBt" secondAttribute="bottom" constant="10" id="DZQ-BF-2hl"/>
+                                    <constraint firstAttribute="trailing" secondItem="ctY-Ro-yp6" secondAttribute="trailing" constant="20" id="EC9-ZQ-8Yt"/>
+                                    <constraint firstItem="rSw-cJ-zuV" firstAttribute="centerX" secondItem="KYk-ml-Ndb" secondAttribute="centerX" id="N1T-RS-o4t"/>
+                                    <constraint firstItem="Jpe-fy-MBt" firstAttribute="centerX" secondItem="KYk-ml-Ndb" secondAttribute="centerX" id="Nb9-nh-q2l"/>
+                                    <constraint firstItem="ctY-Ro-yp6" firstAttribute="centerX" secondItem="KYk-ml-Ndb" secondAttribute="centerX" id="UAe-Je-5QU"/>
+                                    <constraint firstItem="ctY-Ro-yp6" firstAttribute="centerY" secondItem="KYk-ml-Ndb" secondAttribute="centerY" id="f7v-Pf-W2k"/>
+                                    <constraint firstItem="ctY-Ro-yp6" firstAttribute="leading" secondItem="KYk-ml-Ndb" secondAttribute="leading" constant="20" id="gcF-bp-hmz"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="KYk-ml-Ndb" firstAttribute="top" secondItem="pIg-z4-l7p" secondAttribute="top" id="DCK-7y-IBM"/>
+                            <constraint firstItem="KYk-ml-Ndb" firstAttribute="leading" secondItem="pIg-z4-l7p" secondAttribute="leading" id="jYo-Kk-zjH"/>
+                            <constraint firstItem="pIg-z4-l7p" firstAttribute="bottom" secondItem="KYk-ml-Ndb" secondAttribute="bottom" id="lH4-fG-pkR"/>
+                            <constraint firstItem="pIg-z4-l7p" firstAttribute="trailing" secondItem="KYk-ml-Ndb" secondAttribute="trailing" id="txC-Py-MEs"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="pIg-z4-l7p"/>
+                    </view>
+                    <connections>
+                        <outlet property="actionButton" destination="rSw-cJ-zuV" id="zNi-aA-Cyo"/>
+                        <outlet property="descriptionLabel" destination="ctY-Ro-yp6" id="MLX-oE-EOh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YM0-tk-ad7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-36" y="1899.400299850075"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="fail" width="321" height="157"/>
+    </resources>
+</document>
